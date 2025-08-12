@@ -34,28 +34,51 @@ const quotes = [
     author: "Nelson Mandela"
   },
   {
-    quote: "The greatest glory in living lies not in never falling, but in rising every time we fall.",
-    author: "Nelson Mandela"
-  },
-  {
     quote: "The future belongs to those who believe in the beauty of their dreams.",
     author: "Eleanor Roosevelt"
   },
   {
-    quote: "In the end, we will remember not the words of our enemies, but the silence of our friends.",
-    author: "Martin Luther King Jr."
+    quote: "Turn your wounds into wisdom.",
+    author: "Oprah Winfrey"
   },
   {
-    quote: "The greatest glory in living lies not in never falling, but in rising every time we fall.",
-    author: "Nelson Mandela"
+    quote: "Everything you can imagine is real.",
+    author: "Pablo Picasso"
   },
+  {
+    quote: "Great things never came from comfort zones.",
+    author: "Neil Strauss"
+  },
+  {
+    quote: "The mind is everything. What you think you become.",
+    author: "Buddha"
+  },
+  {
+    quote: "Success is not how high you have climbed, but how you make a positive difference to the world.",
+    author: "Roy T. Bennett"
+  },
+  {
+    quote: "Dream big and dare to fail.",
+    author: "Norman Vaughan"
+  }
+];
+
+const bgGradients = [
+  "from-blue-300 to-purple-400",
+  "from-pink-300 to-yellow-300",
+  "from-green-300 to-cyan-400"
 ];
 
 const Home = () => {
+ 
+  const randomGradient = bgGradients[Math.floor(Math.random() * bgGradients.length)];
+
   return (
-    <div className="min-h-screen bg-gradient-to-r from-blue-300 to-purple-400 flex flex-col">
-      {/* Navbar */}
-      <nav className="bg-white shadow-md py-4 px-8">
+    <div className="min-h-screen bg-gradient-to-r from-blue-300 to-purple-400 flex flex-col relative">
+      
+      <div className={`absolute top-0 right-0 w-48 h-48 rounded-bl-full bg-gradient-to-br ${randomGradient} z-10`} />
+
+      <nav className="bg-white shadow-md py-4 px-8 relative z-20">
         <div className="flex justify-between items-center">
           <h1 className="text-2xl font-bold text-blue-600">Quote Hub</h1>
           <ul className="flex gap-6 text-gray-700 font-medium">
@@ -71,10 +94,10 @@ const Home = () => {
           </ul>
         </div>
       </nav>
-      {/* Main Content */}
-      <div className="flex flex-col items-center justify-center px-4 flex-1">
-        <p className="text-2xl text-white mb-6 text-center max-w-xl">
-          Welcome to the Quote Hub! Here you can find inspiring quotes to uplift your day.
+    
+      <div className="flex flex-col items-center justify-center px-4 flex-1 relative z-20">
+        <p className="text-2xl text-white mb-6 mt-3.5 text-center max-w-xl" >
+          Welcome to the Quote Hub!🥳🥳 <br /> Here you can find inspiring quotes to uplift your day.
         </p>
         <h2 className="text-2xl font-semibold text-white mb-6">Your Daily Inspiration</h2>
         <div className="grid gap-6 max-w-2xl w-full">

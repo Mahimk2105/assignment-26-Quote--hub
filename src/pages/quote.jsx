@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 const initialQuotes = [
   { text: "Here you can find inspiring quotes.", author: "Quote Hub" },
+
   { text: "Feel free to explore and get inspired!", author: "Quote Hub" }
 ];
 
@@ -25,7 +26,7 @@ const Quotes = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-r from-purple-300 to-blue-300 flex flex-col">
-      {/* Navbar */}
+   
       <nav className="bg-white shadow-md py-4 px-8">
         <div className="flex justify-between items-center">
           <h1 className="text-2xl font-bold text-blue-600">Quote Hub</h1>
@@ -42,10 +43,10 @@ const Quotes = () => {
           </ul>
         </div>
       </nav>
-      {/* Main Content */}
+    
       <div className="flex items-center justify-center flex-1">
         <div className="w-full max-w-2xl mx-auto p-8 bg-gray-200 rounded-xl shadow-lg">
-          <h1 className="text-3xl font-bold mb-4 text-center">"Where Words Find You"</h1>
+          <h1 className="text-3xl font-bold mb-7  mt-3.5 text-center">"Where Words Find You"</h1>
           <form onSubmit={handleAddQuote} className="mb-6 flex flex-col gap-2 max-w-md mx-auto">
             <input
               type="text"
@@ -56,7 +57,7 @@ const Quotes = () => {
             />
             <input
               type="text"
-              placeholder="Author (optional)"
+              placeholder="Author"
               value={newAuthor}
               onChange={(e) => setNewAuthor(e.target.value)}
               className="p-2 rounded border"

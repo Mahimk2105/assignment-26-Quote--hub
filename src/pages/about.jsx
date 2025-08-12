@@ -43,6 +43,14 @@ const About = () => {
           </p>
         </div>
       </div>
+      <div>
+        <a href="https://github.com/Mahimk2105/assignment-26-Quote--hub"> <img src="/public/github.png" alt="GitHub" />GitHub </a>
+      </div>
+      <footer className="bg-white shadow-md py-4 px-8 mt-6">
+        <div className="text-center text-gray-600">
+          &copy; {new Date().getFullYear()} Quote Hub. All rights reserved.
+        </div>
+      </footer>
     </div>
   );
 };
