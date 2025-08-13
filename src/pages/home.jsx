@@ -106,12 +106,19 @@ const Home = () => {
         </p>
         <h2 className="text-2xl font-semibold text-white mb-6">Your Daily Inspiration</h2>
 
-       {/* Responsive Grid */}
-        <div className="grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl w-full">
+          <div className="grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl w-full">
           {quotes.map((q, i) => (
             <div
               key={i}
-              className={`bg-white bg-opacity-80 p-4 sm:p-6 rounded-lg shadow text-center transition transform hover:scale-105 hover:shadow-xl cursor-pointer ${hoverGradients[i % hoverGradients.length]} hover:text-gray-900`}
+              className={`
+                bg-white bg-opacity-80 p-4 sm:p-6 rounded-lg shadow text-center 
+                transition transform duration-300 ease-out
+                hover:scale-105 hover:shadow-2xl active:scale-95
+                ${hoverGradients[i % hoverGradients.length]}
+                hover:text-gray-900
+                active:ring-4 active:ring-offset-2 active:ring-blue-300
+                sm:hover:rotate-1
+              `}
             >
               <p className="italic text-base sm:text-lg md:text-xl text-gray-800">"{q.quote}"</p>
               <p className="text-right text-gray-600 mt-2 text-sm sm:text-base">— {q.author}</p>
@@ -119,6 +126,11 @@ const Home = () => {
           ))}
         </div>
       </div>
+       <footer className="bg-white shadow-md py-4 px-8 mt-6">
+        <div className="text-center text-gray-600">
+          &copy; {new Date().getFullYear()} Quote Hub. All rights reserved.
+        </div>
+      </footer>
     </div>
   );
 };

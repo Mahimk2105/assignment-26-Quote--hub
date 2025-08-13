@@ -88,6 +88,11 @@ const Quotes = () => {
           </div>
         </div>
       </div>
+       <footer className="bg-white shadow-md py-4 px-8 mt-6">
+        <div className="text-center text-gray-600">
+          &copy; {new Date().getFullYear()} Quote Hub. All rights reserved.
+        </div>
+      </footer>
     </div>
   );
 };
