@@ -90,9 +90,9 @@ const Home = () => {
    
       <nav className="bg-white shadow-md py-4 px-8 relative z-20">
         <div className="flex justify-between items-center">
-          <h1 className="text-2xl font-bold text-blue-600">Quote Hub</h1>
+          <h1 className="text-2xl font-bold text-purple-600">Quote Hub</h1>
           <ul className="flex gap-6 text-gray-700 font-medium">
-            <li><a href="/" className="hover:text-blue-600">Home</a></li>
+            <li><a href="/" className="hover:text-purple-600">Home</a></li>
             <li><a href="/quote" className="hover:text-purple-600">Quotes</a></li>
             <li><a href="/about" className="hover:text-purple-600">About</a></li>
           </ul>
@@ -105,16 +105,16 @@ const Home = () => {
           Welcome to the Quote Hub!🥳🥳 <br /> Here you can find inspiring quotes to uplift your day.
         </p>
         <h2 className="text-2xl font-semibold text-white mb-6">Your Daily Inspiration</h2>
-        
-       
-        <div className="grid gap-6 max-w-2xl w-full">
+
+       {/* Responsive Grid */}
+        <div className="grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl w-full">
           {quotes.map((q, i) => (
             <div
               key={i}
-        className={`bg-white bg-opacity-80 p-6 rounded-lg shadow text-center transition transform hover:scale-105 hover:shadow-xl cursor-pointer ${hoverGradients[i % hoverGradients.length]} hover:text-gray-900`}
+              className={`bg-white bg-opacity-80 p-4 sm:p-6 rounded-lg shadow text-center transition transform hover:scale-105 hover:shadow-xl cursor-pointer ${hoverGradients[i % hoverGradients.length]} hover:text-gray-900`}
             >
-              <p className="italic text-xl text-gray-800">"{q.quote}"</p>
-              <p className="text-right text-gray-600 mt-2">— {q.author}</p>
+              <p className="italic text-base sm:text-lg md:text-xl text-gray-800">"{q.quote}"</p>
+              <p className="text-right text-gray-600 mt-2 text-sm sm:text-base">— {q.author}</p>
             </div>
           ))}
         </div>
