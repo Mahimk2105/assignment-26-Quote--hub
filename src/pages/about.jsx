@@ -3,13 +3,14 @@ import React from 'react';
 const About = () => {
   return (
      <div className="min-h-screen bg-gradient-to-r from-purple-400 to-blue-400 flex flex-col">
-      {/* Navbar */}
-      <nav className="bg-white shadow-md py-4 px-8">
+   
+   
+      <nav className="bg-gradient-to-r from-blue-100 to-purple-100 shadow-md py-4 px-8 relative z-20">
         <div className="flex justify-between items-center">
-          <h1 className="text-2xl font-bold text-blue-600">Quote Hub</h1>
+          <h1 className="text-3xl font-bold text-blue-600">Quote Hub</h1>
           <ul className="flex gap-6 text-gray-700 font-medium">
             <li>
-              <a href="/" className="hover:text-blue-600">Home</a>
+              <a href="/" className="hover:text-blue-600" text-bold><b>Home</b></a>
             </li>
             <li>
               <a href="/quote" className="hover:text-blue-600">Quotes</a>
@@ -20,7 +21,7 @@ const About = () => {
           </ul>
         </div>
       </nav>
-      {/* Main Content */}
+     
       <div className="flex items-center justify-center flex-1 w-full">
         <div className="bg-white bg-opacity-90 max-w-2xl w-full p-8 rounded-xl shadow-lg text-center mx-auto">
           <h1 className="text-4xl font-bold mb-4 text-blue-700">About Us</h1>

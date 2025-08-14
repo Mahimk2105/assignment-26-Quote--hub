@@ -26,8 +26,8 @@ const Quotes = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-r from-purple-300 to-blue-300 flex flex-col">
-   
-      <nav className="bg-white shadow-md py-4 px-8">
+
+      <nav className="bg-gradient-to-r from-purple-100 to-blue-100 shadow-md py-4 px-8">
         <div className="flex justify-between items-center">
           <h1 className="text-2xl font-bold text-blue-600">Quote Hub</h1>
           <ul className="flex gap-6 text-gray-700 font-medium">

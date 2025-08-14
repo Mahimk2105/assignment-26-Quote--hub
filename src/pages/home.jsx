@@ -87,12 +87,12 @@ const Home = () => {
 
       <div className={`absolute top-0 right-0 w-48 h-48 rounded-bl-full bg-gradient-to-br ${randomGradient} z-10`} />
 
-   
-      <nav className="bg-white shadow-md py-4 px-8 relative z-20">
+
+      <nav className="bg-gradient-to-r from-blue-100 to-purple-100 shadow-md py-4 px-8 relative z-20">
         <div className="flex justify-between items-center">
           <h1 className="text-2xl font-bold text-purple-600">Quote Hub</h1>
           <ul className="flex gap-6 text-gray-700 font-medium">
-            <li><a href="/" className="hover:text-purple-600">Home</a></li>
+            <li><a href="/" className="hover:text-purple-600" text-bold>Home</a></li>
             <li><a href="/quote" className="hover:text-purple-600">Quotes</a></li>
             <li><a href="/about" className="hover:text-purple-600">About</a></li>
           </ul>
