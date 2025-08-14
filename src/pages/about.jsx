@@ -10,13 +10,13 @@ const About = () => {
           <h1 className="text-3xl font-bold text-blue-600">Quote Hub</h1>
           <ul className="flex gap-6 text-gray-700 font-medium">
             <li>
-              <a href="/" className="hover:text-blue-600" text-bold><b>Home</b></a>
+              <a href="/" className="hover:text-blue-600" text-bold>Home</a>
             </li>
             <li>
               <a href="/quote" className="hover:text-blue-600">Quotes</a>
             </li>
             <li>
-              <a href="/about" className="hover:text-blue-600">About</a>
+              <a href="/about" className="hover:text-blue-600" text-bold>About</a>
             </li>
           </ul>
         </div>
@@ -45,7 +45,7 @@ const About = () => {
         </div>
       </div>
       <div>
-        <a href="https://github.com/Mahimk2105/assignment-26-Quote--hub"> <img src="/public/github.png" className="inline-block w-6 h-6 mr-1" alt="GitHub" />GitHub </a>
+        <a href="https://github.com/Mahimk2105/assignment-26-Quote--hub"> <img src="/github.png" className="inline-block w-6 h-6 mr-1" alt="GitHub" />GitHub </a>
       </div>
       <footer className="bg-white shadow-md py-4 px-8 mt-6">
         <div className="text-center text-gray-600">
